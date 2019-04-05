@@ -14,6 +14,7 @@ class LibrealsenseConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=True"
     generators = "cmake"
+    short_paths = True
     source_subfolder = "librealsense-{version}".format(version=version)
 
     def source(self):
