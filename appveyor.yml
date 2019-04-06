@@ -4,36 +4,98 @@ environment:
     PYTHON: "C:\\Python37"
 
     matrix:
+        # vs2015
+        ## x86
+        ### Release
         - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
           CONAN_VISUAL_VERSIONS: 14
+          CONAN_ARCHS: x86
           CONAN_BUILD_TYPES: Release
           BUILD_SHARED: True
         - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
           CONAN_VISUAL_VERSIONS: 14
+          CONAN_ARCHS: x86
           CONAN_BUILD_TYPES: Release
           BUILD_SHARED: False
+        ### Debug
         - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
           CONAN_VISUAL_VERSIONS: 14
+          CONAN_ARCHS: x86
           CONAN_BUILD_TYPES: Debug
           BUILD_SHARED: True
         - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
           CONAN_VISUAL_VERSIONS: 14
+          CONAN_ARCHS: x86
           CONAN_BUILD_TYPES: Debug
           BUILD_SHARED: False
+        ## x64
+        ### Release
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+          CONAN_VISUAL_VERSIONS: 14
+          CONAN_ARCHS: x86_64
+          CONAN_BUILD_TYPES: Release
+          BUILD_SHARED: True
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+          CONAN_VISUAL_VERSIONS: 14
+          CONAN_ARCHS: x86_64
+          CONAN_BUILD_TYPES: Release
+          BUILD_SHARED: False
+        ### Debug
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+          CONAN_VISUAL_VERSIONS: 14
+          CONAN_ARCHS: x86_64
+          CONAN_BUILD_TYPES: Debug
+          BUILD_SHARED: True
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+          CONAN_VISUAL_VERSIONS: 14
+          CONAN_ARCHS: x86_64
+          CONAN_BUILD_TYPES: Debug
+          BUILD_SHARED: False
+        # vs2017
+        ## x86
+        ### Release
         - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
           CONAN_VISUAL_VERSIONS: 15
+          CONAN_ARCHS: x86
           CONAN_BUILD_TYPES: Release
           BUILD_SHARED: True
         - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
           CONAN_VISUAL_VERSIONS: 15
+          CONAN_ARCHS: x86
           CONAN_BUILD_TYPES: Release
           BUILD_SHARED: False
+        ### Debug
         - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
           CONAN_VISUAL_VERSIONS: 15
+          CONAN_ARCHS: x86
           CONAN_BUILD_TYPES: Debug
           BUILD_SHARED: True
         - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
           CONAN_VISUAL_VERSIONS: 15
+          CONAN_ARCHS: x86
+          CONAN_BUILD_TYPES: Debug
+          BUILD_SHARED: False
+        ## x64
+        ### Release
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+          CONAN_VISUAL_VERSIONS: 15
+          CONAN_ARCHS: x86_64
+          CONAN_BUILD_TYPES: Release
+          BUILD_SHARED: True
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+          CONAN_VISUAL_VERSIONS: 15
+          CONAN_ARCHS: x86_64
+          CONAN_BUILD_TYPES: Release
+          BUILD_SHARED: False
+        ### Debug
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+          CONAN_VISUAL_VERSIONS: 15
+          CONAN_ARCHS: x86_64
+          CONAN_BUILD_TYPES: Debug
+          BUILD_SHARED: True
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+          CONAN_VISUAL_VERSIONS: 15
+          CONAN_ARCHS: x86_64
           CONAN_BUILD_TYPES: Debug
           BUILD_SHARED: False
 
