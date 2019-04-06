@@ -1,0 +1,42 @@
+jobs:
+- job: 'Win'
+  pool: 
+    vmImage: 'vs2017-win2016'
+  variables:
+    CONAN_VISUAL_VERSIONS: 15
+  strategy:
+    matrix:
+      x86_release_shared:
+        CONAN_ARCHS: x86
+        CONAN_BUILD_TYPES: Release
+        BUILD_SHARED: True
+      x86_release_static:
+        CONAN_ARCHS: x86
+        CONAN_BUILD_TYPES: Release
+        BUILD_SHARED: False
+      x86_debug_shared:
+        CONAN_ARCHS: x86
+        CONAN_BUILD_TYPES: Debug
+        BUILD_SHARED: True
+      x86_debug_static:
+        CONAN_ARCHS: x86
+        CONAN_BUILD_TYPES: Debug
+        BUILD_SHARED: False
+      x64_release_shared:
+        CONAN_ARCHS: x86_64
+        CONAN_BUILD_TYPES: Release
+        BUILD_SHARED: True
+      x64_release_static:
+        CONAN_ARCHS: x86_64
+        CONAN_BUILD_TYPES: Release
+        BUILD_SHARED: False
+      x64_debug_shared:
+        CONAN_ARCHS: x86_64
+        CONAN_BUILD_TYPES: Debug
+        BUILD_SHARED: True
+      x64_debug_static:
+        CONAN_ARCHS: x86_64
+        CONAN_BUILD_TYPES: Debug
+        BUILD_SHARED: False
+  steps:
+  - template: .ci/azure-pipelines/build.yml
